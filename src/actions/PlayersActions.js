@@ -20,3 +20,10 @@ export function starPlayer(id) {
     id,
   };
 }
+// 更新playerlist
+export function updatePlayer(players) {
+  return {
+    type: types.UPDATE_PLAYER,
+    players,
+  };
+}

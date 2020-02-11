@@ -1,0 +1,105 @@
+:local(.selectWrap){
+    display: inline-block;
+    width: 10rem;
+    height:3rem;
+    line-height: 3rem;
+    font-size: 1rem;
+    list-style: none;
+    user-select:none;
+    outline: 0;
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: content-box;
+    position: relative;
+}
+:local(.selectWrap:hover){
+    border-color: #1890ff;
+}
+:local(.selectBox){
+    width:100%;
+    height:100%;
+    padding-left:1rem;
+    padding-right: 3rem;
+    position: relative;
+}
+:local(.placeholder){
+    width:99%;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+
+}
+:local(.selectValue){
+    width:99%;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+}
+:local(.selectArrowBox){
+    display: block;
+    position: absolute;
+    top:0.5rem;
+    right:0.5rem;
+}
+:local(.selectArrow){
+    position: relative;
+    width:2rem;
+    height:2rem;
+}
+:local(.selectArrow::before){
+    position: absolute;
+    right: 0.5rem;
+    top: 0.75rem;
+    width: 0;
+    height: 0;
+    content: "";
+    border-width: 0.5rem 0.5rem 0rem 0.5rem;
+    border-style: solid;
+    border-color: #666 transparent;
+    -webkit-transition: all .25s;
+       -moz-transition: all .25s;
+        -ms-transition: all .25s;
+         -o-transition: all .25s;
+            transition: all .25s;
+}
+:local(.selectArrow.active::before){
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+:local(.select){
+    width:100%;
+    height:auto;
+    padding:0rem;
+    position: absolute;
+    top:3.25rem;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2020;
+}
+:local(.option){
+    height:3rem;
+    line-height: 3rem;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+:local(.option:hover){
+    background-color: silver;
+}
+:local(.optionSelect){
+    background-color: skyblue;
+}

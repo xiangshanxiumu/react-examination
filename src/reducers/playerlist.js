@@ -70,7 +70,11 @@ export default function players(state = initialState, action) {
         ...state,
         playersById: players,
       };
-
+    case types.UPDATE_PLAYER: // 更新playerlist
+      return {
+        ...state,
+        playersById: action.players,
+      };
     default:
       return state;
   }
